@@ -1,157 +1,81 @@
-# Sistema-escolar-
-Escolar 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colegio Mixto Bilingüe Discovery</title>
-<link rel="stylesheet" href="style.css">
+<title>Colegio Discovery - Inicio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#f5f5f5;}
+header{background:#556B2F;color:white;padding:20px;text-align:center;font-size:30px;font-weight:bold;}
+nav{display:flex;justify-content:center;gap:25px;padding:15px;background:#3f4f22;}
+nav a{color:white;text-decoration:none;font-size:18px;font-weight:600;}
+nav a:hover{color:#ffd000;}
+.hero{height:450px;background:url('https://images.pexels.com/photos/414595/pexels-photo-414595.jpeg') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;color:white;text-shadow:2px 2px 10px rgba(0,0,0,0.7);}
+.hero h1{font-size:48px;}
+.section{padding:60px 20px;text-align:center;}
+.section h2{font-size:36px;color:#556B2F;margin-bottom:15px;}
+.section p{font-size:18px;color:#444;width:75%;margin:10px auto;}
+.services{display:flex;flex-wrap:wrap;justify-content:space-around;gap:25px;margin-top:30px;}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);width:290px;}
+.card h3{color:#556B2F;margin-bottom:10px;}
+.card p{font-size:16px;color:#333;}
+footer{background:#556B2F;color:white;padding:20px;text-align:center;margin-top:40px;}
+@media(max-width:768px){
+.services{flex-direction:column;align-items:center;}
+}
+</style>
 </head>
-
 <body>
 
-<header>
-<h1>Colegio Mixto Bilingüe Discovery</h1>
-</header>
+<header>🧑‍🎓 Colegio Discovery</header>
 
 <nav>
-<button onclick="mostrar('estudiantes')">Estudiantes</button>
-<button onclick="mostrar('pagos')">Pagos</button>
-<button onclick="mostrar('notas')">Calificaciones</button>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
-<section id="estudiantes">
+<div class="hero" id="inicio">
+<h1>Bienvenido a Colegio Discovery</h1>
+</div>
 
-<h2>Agregar Estudiante</h2>
-
-<input id="nombre" placeholder="Nombre">
-<input id="grado" placeholder="Grado">
-<input id="seccion" placeholder="Sección">
-
-<button onclick="agregarEstudiante()">Guardar</button>
-
-<h3>Lista de Estudiantes</h3>
-<ul id="listaEstudiantes"></ul>
-
+<section class="section" id="nosotros">
+<h2>¿Quiénes somos?</h2>
+<p>Somos un colegio comprometido con la educación integral de nuestros estudiantes, fomentando valores, aprendizaje y habilidades para la vida. Nuestro enfoque es formar personas críticas, responsables y creativas.</p>
 </section>
 
-<section id="pagos" class="oculto">
+<section class="section" id="servicios">
+<h2>Nuestros servicios</h2>
+<div class="services">
 
-<h2>Registrar Pago</h2>
+<div class="card">
+<h3>📚 Educación Inicial</h3>
+<p>Programas adaptados con enfoque lúdico para fortalecer las bases del conocimiento desde los primeros años.</p>
+</div>
 
-<input id="estudiantePago" placeholder="Nombre del estudiante">
-<input id="tipoPago" placeholder="Tipo de pago">
+<div class="card">
+<h3>📖 Educación Primaria</h3>
+<p>Desarrollo académico sólido combinado con valores y habilidades sociales para la vida escolar y personal.</p>
+</div>
 
-<input id="monto" placeholder="Monto Q">
+<div class="card">
+<h3>🎓 Educación Media</h3>
+<p>Planes de estudio dinámicos para preparar a nuestros estudiantes hacia su futuro académico y profesional.</p>
+</div>
 
-<button onclick="registrarPago()">Guardar Pago</button>
-
-<ul id="listaPagos"></ul>
-
+</div>
 </section>
 
-<section id="notas" class="oculto">
-
-<h2>Registrar Calificaciones</h2>
-
-<input id="estudianteNota" placeholder="Estudiante">
-
-<input id="materia" placeholder="Materia">
-
-<input id="nota" placeholder="Nota">
-
-<button onclick="registrarNota()">Guardar Nota</button>
-
-<ul id="listaNotas"></ul>
-
+<section class="section" id="contacto">
+<h2>Contáctanos</h2>
+<p>¿Deseas más información? Escríbenos a <strong>info@colegiodiscovery.edu.gt</strong> o llámanos al <strong>+502 1234-5678</strong>.</p>
 </section>
 
-<script src="script.js"></script>
+<footer>
+<p>© 2026 Colegio Discovery. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
-
-body{
-
-font-family: Arial;
-
-background:#f2f2f2;
-
-margin:0;
-
-}
-
-.contenedor{
-
-max-width:500px;
-
-margin:auto;
-
-background:white;
-
-padding:20px;
-
-min-height:100vh;
-
-}
-
-h1{
-
-text-align:center;
-
-}
-
-input{
-
-width:100%;
-
-padding:12px;
-
-margin-top:8px;
-
-margin-bottom:8px;
-
-border-radius:5px;
-
-border:1px solid #ccc;
-
-}
-
-button{
-
-width:100%;
-
-padding:12px;
-
-background:#2e7d32;
-
-color:white;
-
-border:none;
-
-border-radius:5px;
-
-margin-bottom:10px;
-
-}
-
-button:hover{
-
-background:#1b5e20;
-
-}
-
-.tarjeta{
-
-background:#f9f9f9;
-
-padding:10px;
-
-margin:5px 0;
-
-border-radius:5px;
-
-border:1px solid #ddd;
-
-}
